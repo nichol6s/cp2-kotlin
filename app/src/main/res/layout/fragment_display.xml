@@ -1,25 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="wrap_content"
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:columnCount="2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
 
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:" />
 
-    <TextView
-        android:id="@+id/textViewPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome Recebido" />
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Recebido" />
+
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senha:" />
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senha Recebida" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

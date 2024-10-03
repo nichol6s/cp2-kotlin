@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     lateinit var buttonAbrir: Button
@@ -19,6 +17,14 @@ class MainActivity : AppCompatActivity() {
         buttonAbrir.setOnClickListener {
             var navegarSegundaTela = Intent(this, MainActivity2::class.java)
             startActivity(navegarSegundaTela)
+        }
+
+        if (savedInstanceState == null) {
+            // Inicializa e insere o fragment no container
+            val formFragment = FormFragment()
+            supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_form, formFragment) // Adiciona o FormFragment ao container
+                .commit()
         }
     }
 }

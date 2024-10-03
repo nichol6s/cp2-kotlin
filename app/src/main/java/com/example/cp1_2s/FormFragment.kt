@@ -35,7 +35,7 @@ class FormFragment : Fragment() {
             displayFragment.arguments = bundle
 
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, displayFragment)
+                .replace(R.id.fragment_form, displayFragment)
                 .addToBackStack(null)
                 .commit()
         }
