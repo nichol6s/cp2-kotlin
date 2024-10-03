@@ -18,37 +18,49 @@
             android:id="@+id/textViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome:" />
+            android:text="Nome:"
+            android:textColor="#FFF"
+            />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome Recebido" />
+            android:text="Nome Recebido"
+            android:textColor="#FFF"
+            />
 
         <TextView
             android:id="@+id/textViewEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:" />
+            android:text="Email:"
+            android:textColor="#FFF"
+            />
 
         <TextView
             android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email Recebido" />
+            android:text="Email Recebido"
+            android:textColor="#FFF"
+            />
 
         <TextView
             android:id="@+id/textViewPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Senha:" />
+            android:text="Senha:"
+            android:textColor="#FFF"
+            />
 
         <TextView
             android:id="@+id/tvPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Senha Recebida" />
+            android:text="Senha Recebida"
+            android:textColor="#FFF"
+            />
 
     </GridLayout>
 

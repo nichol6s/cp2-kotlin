@@ -1,5 +1,6 @@
 package com.example.cp1_2s
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 
 class FormFragment : Fragment() {
+
     private lateinit var editTextName: EditText
     private lateinit var editTextEmail: EditText
     private lateinit var editTextPassword: EditText
@@ -26,20 +28,21 @@ class FormFragment : Fragment() {
         buttonSubmit = view.findViewById(R.id.buttonSubmit)
 
         buttonSubmit.setOnClickListener {
-            val bundle = Bundle().apply {
-                putString("name", editTextName.text.toString())
-                putString("email", editTextEmail.text.toString())
-                putString("password", editTextPassword.text.toString())
-            }
-            val displayFragment = DisplayFragment()
-            displayFragment.arguments = bundle
+            // Captura os dados
+            val name = editTextName.text.toString()
+            val email = editTextEmail.text.toString()
+            val password = editTextPassword.text.toString()
 
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_form, displayFragment)
-                .addToBackStack(null)
-                .commit()
+            // Cria o intent e envia os dados para a próxima activity
+            val intent = Intent(requireContext(), MainActivity2::class.java).apply {
+                putExtra("name", name)
+                putExtra("email", email)
+                putExtra("password", password)
+            }
+            startActivity(intent)
         }
 
         return view
     }
 }
+

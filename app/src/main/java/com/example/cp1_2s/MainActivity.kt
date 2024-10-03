@@ -13,18 +13,15 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        buttonAbrir = findViewById<Button>(R.id.btnStart)
-        buttonAbrir.setOnClickListener {
-            var navegarSegundaTela = Intent(this, MainActivity2::class.java)
-            startActivity(navegarSegundaTela)
-        }
+//        buttonAbrir = findViewById<Button>(R.id.btnStart)
+//        buttonAbrir.setOnClickListener {
+//            var navegarSegundaTela = Intent(this, MainActivity2::class.java)
+//            startActivity(navegarSegundaTela)
+//        }
 
-        if (savedInstanceState == null) {
-            // Inicializa e insere o fragment no container
-            val formFragment = FormFragment()
-            supportFragmentManager.beginTransaction()
-                .add(R.id.fragment_form, formFragment) // Adiciona o FormFragment ao container
-                .commit()
-        }
+        val formFragment = FormFragment()
+        supportFragmentManager.beginTransaction()
+            .add(R.id.fragment_form, formFragment)
+            .commit()
     }
 }
