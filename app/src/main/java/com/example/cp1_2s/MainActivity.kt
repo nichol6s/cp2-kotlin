@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(navegarSegundaTela)
 //        }
 
-        val formFragment = FormFragment()
-        supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_form, formFragment)
-            .commit()
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, FormFragment())
+                .commit()
+        }
+
     }
 }
